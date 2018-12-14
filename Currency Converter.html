@@ -1,0 +1,16 @@
+<meta charset = "utf-8">
+
+<script>
+
+	var dollarRate = 66.46;
+	var evroRate = 75.06;
+	var amountRub = parseFloat(prompt("Введите сумму в рублях для дальнейшей конвертации в доллары и евро."));
+	var dollarResult = amountRub / dollarRate;
+	var evroResult = amountRub / evroRate;
+
+	dollarResult = Math.round(dollarResult * 100) / 100; // Округляем результат в долларах до 2х знаков после запятой 
+	evroResult = Math.round(evroResult * 100) / 100; // Округляем результат в евро до 2х знаков после запятой
+
+	alert(amountRub + " руб. = " + dollarResult + " долларов \n"  + amountRub + " руб. = " + evroResult + " евро");
+
+</script>
