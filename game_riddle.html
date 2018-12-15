@@ -7,13 +7,19 @@ var riddleThree = "Висит груша нельзя скушать.";
 var riddleFour = "Два кольца, два конца, посередине гвоздик.";
 // Переменные с ответами
 var answerOne = "елка";
+var answerOne1 = "Елка";
+var answerOne2 = "Ель";
+var answerOne3 = "ель";
 var answerTwo = "белка";
+var answerTwo1 = "Белка";
 var answerThree = "лампочка";
+var answerThree1 = "Лампочка";
 var answerFour = "ножницы";
+var answerFour1 = "Ножницы";
 var counter = 0; // Переменная для подсчета правильных ответов
 
 var userAnswer = prompt(riddleOne);
-if (userAnswer == answerOne) {
+if (userAnswer == answerOne || userAnswer == answerOne1 || userAnswer == answerOne2 || userAnswer == answerOne3) {
 	counter++;
 	alert("Верно!\nВы заработали " + counter + " балл.");
 }
@@ -22,27 +28,27 @@ else {
 }
 
 userAnswer = prompt(riddleTwo);
-if (userAnswer == answerTwo) {
+if (userAnswer == answerTwo || userAnswer == answerTwo1) {
 	counter++;
-	alert("Верно!\nВы заработали " + counter + " балл.");
+	alert("Верно!\nВы заработали " + counter + " балла.");
 }
 else {
 	alert("Ответ не верный :((\nСосредоточьтесь!");
 }
 
 userAnswer = prompt(riddleThree);
-if (userAnswer == answerThree) {
+if (userAnswer == answerThree || userAnswer == answerThree1) {
 	counter++;
-	alert("Верно!\nВы заработали " + counter + " балл.");
+	alert("Верно!\nВы заработали " + counter + " балла.");
 }
 else {
 	alert("Ответ не верный :((\nСосредоточьтесь!");
 }
 
 userAnswer = prompt(riddleFour);
-if (userAnswer == answerFour) {
+if (userAnswer == answerFour || userAnswer == answerFour1) {
 	counter++;
-	alert("Верно!\nВы заработали " + counter + " балл.");
+	alert("Верно!\nВы заработали " + counter + " балла.");
 }
 else {
 	alert("Ответ не верный :((\nСосредоточьтесь!");

@@ -1,0 +1,26 @@
+<meta charset = "utf-8">
+<script type="text/javascript">
+
+	do {		
+		var sumDeposit = +prompt("Введите сумму вклада в рублях:");
+	} while (isNaN(sumDeposit) || sumDeposit < 0)
+	do {		
+		var percent = +prompt("Введите желаемый процент:");
+	} while (isNaN(percent) || percent < 0)
+
+	for (var age = 1; age <=5; age ++) {
+		amountDeposit = sumDeposit * percent * age / 100 + sumDeposit;
+		if (age == 1) {
+			alert("Размер вклада за " + age + " год составит " + amountDeposit + " рублей");
+		}
+		else if (age > 1 && age < 5) {
+			alert("Размер вклада за " + age + " года составит " + amountDeposit + " рублей");
+		}
+		else if (age = 5) {
+			alert("Размер вклада за " + age + " лет составит " + amountDeposit + " рублей");
+		}
+	}
+	
+	document.write("Спасибо что воспользовались нашим калькулятором вкладов.<br>Для повторных расчетов обновите страницу.");
+
+</script>
