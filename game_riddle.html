@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+// Переменные с загадками
+var riddleOne = "Зимой и летом одним цветом.";
+var riddleTwo = "Сидит на ветке, но не птица.\nЕсть рыжий хвост, но не лисица.";
+var riddleThree = "Висит груша нельзя скушать.";
+var riddleFour = "Два кольца, два конца, посередине гвоздик.";
+// Переменные с ответами
+var answerOne = "елка";
+var answerTwo = "белка";
+var answerThree = "лампочка";
+var answerFour = "ножницы";
+var counter = 0; // Переменная для подсчета правильных ответов
+
+var userAnswer = prompt(riddleOne);
+if (userAnswer == answerOne) {
+	counter++;
+	alert("Верно!\nВы заработали " + counter + " балл.");
+}
+else {
+	alert("Ответ не верный :((\nСосредоточьтесь!");
+}
+
+userAnswer = prompt(riddleTwo);
+if (userAnswer == answerTwo) {
+	counter++;
+	alert("Верно!\nВы заработали " + counter + " балл.");
+}
+else {
+	alert("Ответ не верный :((\nСосредоточьтесь!");
+}
+
+userAnswer = prompt(riddleThree);
+if (userAnswer == answerThree) {
+	counter++;
+	alert("Верно!\nВы заработали " + counter + " балл.");
+}
+else {
+	alert("Ответ не верный :((\nСосредоточьтесь!");
+}
+
+userAnswer = prompt(riddleFour);
+if (userAnswer == answerFour) {
+	counter++;
+	alert("Верно!\nВы заработали " + counter + " балл.");
+}
+else {
+	alert("Ответ не верный :((\nСосредоточьтесь!");
+}
+
+document.write("Спасибо за игру.<br> Ваш результат " + counter + " из 4" );
+
+</script>
