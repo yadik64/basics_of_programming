@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var answer = parseInt(Math.random() * 100);
+	var counter = 0;
+	var userAnswer = -1;
+
+	while(userAnswer != answer && counter <5) {
+		counter++;
+		do {
+			var userAnswer = +prompt("Введите число от 0 до 100 " + answer + "\n Попытка № " + counter);
+		} while (isNaN(userAnswer) || userAnswer < 0 || userAnswer > 100)
+
+		if (userAnswer < answer) {
+			alert("Не угадали\n Подсказка: Ваше значение меньше чем ответ");
+		}
+		else if (userAnswer > answer) {
+			alert("Не угадали\n Подсказка: Ваше значение больше чем ответ");
+		}
+		else {
+			var  strAlert = "Победа за " + counter;
+			if (counter == 1) {
+				alert(strAlert + " попытку!");
+		}
+			else if (counter > 1 && counter < 5) {
+				alert(strAlert + " попытки!");
+			}
+			else {
+				alert(strAlert + " попыток!");
+			}
+		}
+	}
+	document.write("Игра законченна!");
+
+</script>
