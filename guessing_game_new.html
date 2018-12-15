@@ -1,0 +1,65 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var namePlayerOne = prompt("Игрок 1. Введите ваше имя:");
+	var namePlayerTwo = prompt("Игрок 2. Введите ваше имя:");
+	var playerNumber = 0;
+	var answer = parseInt(Math.random() * 100);
+	var exit = 101;
+	var counter = 0;
+	var attempt = 1;
+
+	while (answer >= answer) {
+		counter++;
+		if (counter & 1) {
+			do {	
+				var userAnswer = +prompt( namePlayerOne + ", ваш ход. \nВведите число от 0 до 100 " + answer + "\nПопытка № " + attempt + "\n Для выхода из программы введите 101.");
+			} while (isNaN(userAnswer) || userAnswer < 0 || userAnswer > 101)
+				if (userAnswer == 101) {
+					break;
+				}
+				else if (userAnswer == answer) {
+					alert(namePlayerOne + ", вы угадали число!");
+					playerNumber = 1;
+					break;
+				}
+				else if (userAnswer > answer) {
+					alert("Не угадали\n Подсказка: Ваше значение больше чем ответ");
+				}
+				else if (userAnswer < answer) {
+					alert("Не угадали\n Подсказка: Ваше значение меньше чем ответ");
+				}
+		} else {
+			do {
+			 userAnswer = +prompt(namePlayerTwo + ", ваш ход. \nВведите число от 0 до 100 " + answer + "\nПопытка № " + attempt + "\n Для выхода из программы введите 101.");
+			} while (isNaN(userAnswer) || userAnswer < 0 || userAnswer > 101)
+				if (userAnswer == 101) {
+					break;
+				}
+				else if (userAnswer == answer) {
+					alert(namePlayerTwo + ", вы угадали число!");
+					playerNumber = 2;
+					break;
+				}
+				else if (userAnswer > answer) {
+					alert("Не угадали\n Подсказка: Ваше значение больше чем ответ");
+				}
+				else if (userAnswer < answer) {
+					alert("Не угадали\n Подсказка: Ваше значение меньше чем ответ");
+				}
+			 attempt++;
+		}
+	}
+
+	if (playerNumber == 1) {
+		document.write("Игра закончена! <br> Победитель " + namePlayerOne + "<br>Количество попыток = " + attempt);
+	}
+	else if (playerNumber == 2) {
+		document.write("Игра закончена! <br> Победитель " + namePlayerTwo + "<br>Количество попыток = " + attempt);
+	}
+	else if (playerNumber == 0) {
+		document.write("Игра закончена ничьей на " + attempt + " попытке");
+	}
+
+
+</script>
