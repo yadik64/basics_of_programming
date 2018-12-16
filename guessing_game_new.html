@@ -13,7 +13,7 @@
 		counter++;
 		if (counter & 1) {
 			do {	
-				var userAnswer = +prompt( namePlayerOne + ", ваш ход. \nВведите число от 0 до 100 " + answer + "\nПопытка № " + attempt + "\n Для выхода из программы введите 101.");
+				var userAnswer = +prompt( namePlayerOne + ", ваш ход. \nВведите число от 0 до 100 \nПопытка № " + attempt + "\n Для выхода из программы введите 101.");
 			} while (isNaN(userAnswer) || userAnswer < 0 || userAnswer > 101)
 				if (userAnswer == 101) {
 					break;
@@ -31,7 +31,7 @@
 				}
 		} else {
 			do {
-			 userAnswer = +prompt(namePlayerTwo + ", ваш ход. \nВведите число от 0 до 100 " + answer + "\nПопытка № " + attempt + "\n Для выхода из программы введите 101.");
+			 userAnswer = +prompt(namePlayerTwo + ", ваш ход. \nВведите число от 0 до 100 \nПопытка № " + attempt + "\n Для выхода из программы введите 101.");
 			} while (isNaN(userAnswer) || userAnswer < 0 || userAnswer > 101)
 				if (userAnswer == 101) {
 					break;

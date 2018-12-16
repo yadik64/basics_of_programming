@@ -1,25 +1,16 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 // Переменные с загадками
-var riddleOne = "Зимой и летом одним цветом.";
-var riddleTwo = "Сидит на ветке, но не птица.\nЕсть рыжий хвост, но не лисица.";
-var riddleThree = "Висит груша нельзя скушать.";
-var riddleFour = "Два кольца, два конца, посередине гвоздик.";
+var riddle = ["Зимой и летом одним цветом.", "Сидит на ветке, но не птица.\nЕсть рыжий хвост, но не лисица.", "Висит груша нельзя скушать.", "Два кольца, два конца, посередине гвоздик."];
 // Переменные с ответами
-var answerOne = "елка";
-var answerOne1 = "Елка";
-var answerOne2 = "Ель";
-var answerOne3 = "ель";
-var answerTwo = "белка";
-var answerTwo1 = "Белка";
-var answerThree = "лампочка";
-var answerThree1 = "Лампочка";
-var answerFour = "ножницы";
-var answerFour1 = "Ножницы";
+var answerOne = ["елка", "Елка", "Ель", "ель"];
+var answerTwo = ["белка", "Белка"];
+var answerThree = ["лампочка", "Лампочка"];
+var answerFour = ["ножницы", "Ножницы"];
 var counter = 0; // Переменная для подсчета правильных ответов
 
-var userAnswer = prompt(riddleOne);
-if (userAnswer == answerOne || userAnswer == answerOne1 || userAnswer == answerOne2 || userAnswer == answerOne3) {
+var userAnswer = prompt(riddle[0]);
+if (userAnswer == answerOne[0] || userAnswer == answerOne[1] || userAnswer == answerOne[2] || userAnswer == answerOne[3]) {
 	counter++;
 	alert("Верно!\nВы заработали " + counter + " балл.");
 }
@@ -27,8 +18,8 @@ else {
 	alert("Ответ не верный :((\nСосредоточьтесь!");
 }
 
-userAnswer = prompt(riddleTwo);
-if (userAnswer == answerTwo || userAnswer == answerTwo1) {
+userAnswer = prompt(riddle[1]);
+if (userAnswer == answerTwo[0] || userAnswer == answerTwo[1]) {
 	counter++;
 	alert("Верно!\nВы заработали " + counter + " балла.");
 }
@@ -36,8 +27,8 @@ else {
 	alert("Ответ не верный :((\nСосредоточьтесь!");
 }
 
-userAnswer = prompt(riddleThree);
-if (userAnswer == answerThree || userAnswer == answerThree1) {
+userAnswer = prompt(riddle[2]);
+if (userAnswer == answerThree[0] || userAnswer == answerThree[1]) {
 	counter++;
 	alert("Верно!\nВы заработали " + counter + " балла.");
 }
@@ -45,8 +36,8 @@ else {
 	alert("Ответ не верный :((\nСосредоточьтесь!");
 }
 
-userAnswer = prompt(riddleFour);
-if (userAnswer == answerFour || userAnswer == answerFour1) {
+userAnswer = prompt(riddle[3]);
+if (userAnswer == answerFour[0] || userAnswer == answerFour[1]) {
 	counter++;
 	alert("Верно!\nВы заработали " + counter + " балла.");
 }
