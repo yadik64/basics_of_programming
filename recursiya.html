@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	
+	function print10(n) {
+		var arr = [];
+		if ( n == 1)  arr.push(n);
+		else {
+			print10(n-1);
+			arr.push(n);
+		}
+		return arr;
+	}
+
+	var a = [];
+	a = print10(9);
+	alert(a);
+
+</script>

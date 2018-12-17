@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	//Задание 1a
+	function createArray(n) {
+		var array = [];
+
+		for(var i = 1; i <= n; i++) {
+			array.push(i);
+		}
+		return array;
+	}
+	
+	//Задание 1b
+	function sumArray(userArray) {
+		var sum = 0;
+		for (var i = 0; i <= userArray.length - 1; i++) {
+			sum = sum + userArray[i];
+		}
+		return sum;
+	}
+
+
+	//Задание 1c
+	function maxNumber(userArray) {
+		var max = userArray[0];
+		for (var i = 0; i <= userArray.length; i++) {
+			if(max < userArray[i]) max = userArray[i];
+		}
+		return max;
+	}
+
+	//Задание 1d
+	function minNumber(userArray) {
+		var min = userArray[0];
+		for(var i = 0; i <= userArray.length; i++) {
+			if (min > userArray[i]) min = userArray[i];
+		}
+		return min;
+	}
+
+	//Задание 1e
+	function evenNumbers(userArray) {
+		var evenArray = [];
+		for(var i = 0; i <= userArray.length; i++) {
+			if (userArray[i] % 2 == 0) evenArray.push(userArray[i])
+		}
+		return evenArray;
+	}
+
+	//Функция создания массива (написал для удобности проверки работоспособности заданных функций)
+ 	function createUserArray() {
+    	var userArray = [];
+    	var arrayLength = +prompt("Задайте длинну массива");
+    	for (var i = 0; i < arrayLength; i++) {
+    		userArray.push(+prompt("Введите числовой элемент под индексом " + i));
+    	}
+    	return userArray;
+	}
+
+
+	var number = +prompt("Введите число для проверки Задания 1a");
+	alert("Создан массив с количеством элементов = " + number + " со следующими значениями " + createArray(number));
+
+	alert("Для проверки заданий 1b, 1c, 1d, 1e давайте создадим массив");
+	var userArray = createUserArray();
+
+	alert("Сумма элементов вашего массива = " + sumArray(userArray));
+	alert("Максимальное число вашего массива = " + maxNumber(userArray));
+	alert("Минимальное число вашего массива = " + minNumber(userArray));
+	alert("А вот и четные элементы вашего массива --> " + evenNumbers(userArray));
+
+	document.write("Спасибо за проверку моего задания!");
+
+</script>
