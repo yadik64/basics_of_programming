@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+// Постарался сделать программу как можно универсальнее. Для замены или добавления загадок нужно только отредактировать массив riddleAndAnswer. 
+	function riddleAction(arrayData, arrayCounters) {
+		var userAnswer = prompt(arrayData[arrayCounters[0]][0]);
+		var status = false;
+		for(var i = 1; i < arrayData[arrayCounters[0]].length; i++) {
+			if (userAnswer == arrayData[arrayCounters[0]][i]) {
+				status = true;
+				break;
+			} 
+		}
+			if (status == true) { 
+				arrayCounters[0]++;
+				arrayCounters[1] ++;
+				alert("Верно!\nВы заработали " + arrayCounters[1] + " балла.");
+				return arrayCounters;
+			} else {
+				alert("Ответ не верный :((\nСосредоточьтесь!");
+				arrayCounters[0]++
+				return arrayCounters;
+			}
+	}
+
+	var riddleAndAnswer = [
+		["Зимой и летом одним цветом.", "елка", "Елка", "Ель", "ель"],
+		["Сидит на ветке, но не птица.\nЕсть рыжий хвост, но не лисица.", "белка", "Белка"],
+		["Висит груша нельзя скушать.", "лампочка", "Лампочка"],
+		["Два кольца, два конца, посередине гвоздик.", "ножницы", "Ножницы"],
+
+	];
+	var CounterAndPoints = [0, 0];
+
+	while (CounterAndPoints[0] < riddleAndAnswer.length) {
+		CounterAndPoints = riddleAction(riddleAndAnswer, CounterAndPoints);
+	}
+
+	document.write("<center><h1>Спасибо за игру.<br> Ваш результат " + CounterAndPoints[1] + " из " + riddleAndAnswer.length + "</h1></center>");	
+
+</script>
